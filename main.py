@@ -48,7 +48,7 @@ def process_transaction(order):
             dimes = int(input("How many dimes?: "))
             nickles = int(input("How many nickles?: "))
             pennies = int(input("How many pennies?: "))
-            total_pay = quarters + dimes + nickles + pennies
+            total_pay = quarters*coins['Quarter'] + dimes*coins['dime'] + nickles*coins['Nickel'] + pennies*coins['penny']
             if total_pay >= MENU[order]['cost']:
                 change = total_pay - MENU[order]['cost']
                 if change != 0:
@@ -77,7 +77,7 @@ def process_transaction(order):
         dimes = int(input("How many dimes?: "))
         nickles = int(input("How many nickles?: "))
         pennies = int(input("How many pennies?: "))
-        total_pay = quarters + dimes + nickles + pennies
+        total_pay = quarters*coins['Quarter'] + dimes*coins['dime'] + nickles*coins['Nickel'] + pennies*coins['penny']
         if total_pay >= MENU[order]['cost']:
             change = total_pay - MENU[order]['cost']
             if change != 0:
